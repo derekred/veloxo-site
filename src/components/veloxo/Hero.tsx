@@ -1,6 +1,5 @@
 import { Link } from "@tanstack/react-router";
 import { Reveal } from "./Reveal";
-import heroVideo from "@/assets/v1.mp4.asset.json";
 
 export function Hero() {
   return (
@@ -49,13 +48,16 @@ export function Hero() {
       <Reveal delay={500}>
         <div className="relative mx-auto mt-20 max-w-5xl px-4 md:px-8">
           <div className="relative overflow-hidden rounded-2xl border border-white/10">
-            <video
-              src={heroVideo.url}
-              controls
-              controlsList="nodownload"
-              playsInline
-              className="w-full h-auto block [&:fullscreen]:object-contain [&:fullscreen]:w-screen [&:fullscreen]:h-screen [&::-webkit-full-screen]:object-contain [&::-webkit-full-screen]:w-screen [&::-webkit-full-screen]:h-screen"
-            />
+            <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
+              <iframe
+                src="https://www.youtube.com/embed/6u4nxG1SgwM"
+                title="Veloxo Agency"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="absolute inset-0 w-full h-full"
+                style={{ border: "none" }}
+              />
+            </div>
           </div>
         </div>
       </Reveal>
